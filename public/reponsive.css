@@ -1,0 +1,184 @@
+/* Mobile & Tablet */
+@media (max-width: 1023px) {
+    :root {
+        --header-height: 100px;
+    }
+
+    .main {
+        margin-top: var(--header-height);
+    }
+
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+
+    .header__nav {
+        height: 80px;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        height: 80px;
+    }
+
+    .header__nav-item {
+        line-height: 80px;
+    }
+
+    .main {
+        margin-top: 80px;
+    }
+
+    .main__title > div {
+        line-height: 4rem;
+    }
+
+    .main__trick-title > h1 {
+        line-height: 4rem;
+        transform: translateY(-200px);
+    }
+
+    .main__trick-img {
+        width: 100%;
+    }
+
+    .slide-wrapper {
+        height: 290px;
+    }
+
+    .introduce__head {
+        line-height: 4rem;
+    }
+
+    .question-title-img {
+        width: 100%;
+    }
+
+    .Question-title {
+        line-height: 3rem;
+    }
+
+    .Complete > h1 {
+        line-height: 5rem;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-tablet {
+        display: none;
+    }
+
+    .header__cart {
+        width: 80px;
+        display: flex;
+        justify-content: right;
+    }
+
+    .header__nav {
+        justify-content: center;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .app__content {
+        margin: 4px;
+    }
+
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .header-with-search {
+        justify-content: space-between;
+    }
+
+    .header__nav {
+        justify-content: center;
+    }
+
+    .header__nav-item {
+        display: flex;
+        width: 100px;
+        justify-content: center;
+        margin-right: 0;
+    }
+
+    .header__nav-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .slide-img {
+        transform: unset;
+    }
+    
+    .search {
+        display: none;
+    }
+
+    .search-mobile {
+        display: block;
+    }
+
+    .search-mobile__check:checked ~ .search {
+        display: flex;
+        position: absolute;
+        bottom: -40px;
+        right: 0;
+        left: 0;
+        margin: 0;
+        box-shadow: 0 1px 3px #999;
+        animation: searchMove linear 0.2s;
+    }
+
+    @keyframes searchMove {
+        from {
+            transform: translateY(-10px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+
+    @keyframes mobilesearchmove {
+        from {
+            top: calc(var(--header-height)/2);
+            opacity: 0;
+        }
+
+        to {
+            top: calc(var(--header-height));
+        }
+    }
+}
+
+/* Small PC */
+@media (min-width: 1024px) and  (max-width: 1238px) {
+    .hide-on-small-pc {
+        display: none;
+    }
+
+    .introduce__head {
+        line-height: 3rem;
+    }
+}
+
+
+/* Tablet & PC */
+@media (min-width: 740px) {
+    .hide-on-tablet-pc {
+        display: none;
+    }
+}
